@@ -10,7 +10,7 @@ public class CardManager : MonoBehaviour
     public List<ScriptableCard> scriptablePool;
     private int _poolLength => scriptablePool.Count;
 
-    public Card GetNewCard()
+    public Card GetNewRandomCard()
     {
         var random = UnityEngine.Random.Range(0, _poolLength);
         var selectedScriptable = scriptablePool[random];

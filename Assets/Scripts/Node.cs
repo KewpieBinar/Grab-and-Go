@@ -9,6 +9,7 @@ public class Node : MonoBehaviour
 
     public Action<string> nodeTrigger;
 
+    public NodeEffect nodeEffect;
     //connection
     public Node north;
     public Node south;
@@ -18,12 +19,7 @@ public class Node : MonoBehaviour
 
     private void Awake()
     {
-       /* connection = new List<Node> {
-            north, //0
-            east, //1
-            south, //2
-            west  //3
-        };*/
+        nodeEffect = gameObject.GetComponent<NodeEffect>();
     }
 
     public void Trigger() 
@@ -40,13 +36,6 @@ public class Node : MonoBehaviour
         if (effect == null) return;
     }
 
-
-
-    public int GetNodeId()
-    {
-        return nodeID;
-    }
-
     public bool isSpecial()
     {
         string spc = "special";
@@ -54,6 +43,11 @@ public class Node : MonoBehaviour
 
         if (tag.Equals(spc)) return true;
         return false;
+    }
+
+    public bool HasEffect()
+    {
+        return nodeEffect.IsNull;
     }
 
     public int NodeActiveConnection()

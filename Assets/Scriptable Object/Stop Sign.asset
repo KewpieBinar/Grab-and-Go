@@ -10,8 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d1f2b2de4b521dd4bb62988b931190b9, type: 3}
-  m_Name: TestCard
+  m_Name: Stop Sign
   m_EditorClassIdentifier: 
-  cardName: 0
+  EffectName: Stop
+  EffectTag: STOP
   cardImage: {fileID: 0}
+  effectOnPlayer: 1
   modifier: 0
+  effectDuration: 0

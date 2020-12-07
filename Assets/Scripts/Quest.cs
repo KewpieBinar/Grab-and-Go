@@ -7,8 +7,8 @@ public class Quest
 {
     public Node pickupNode;
     public Node destinationNode;
-    public float reward;
-
+    public float reward = -1;
+    
     public Quest (Node pickupNode, Node destinationNode, float reward)
     {
         this.pickupNode = pickupNode;

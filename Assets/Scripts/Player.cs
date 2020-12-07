@@ -3,91 +3,40 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Player Class
+/// Contains all variable that can be effected by a card effect
+/// variable can be accessed by more than 2 class
+/// Contain Basic Info & stats Of Player
+/// Contains method that affect variable
+/// </summary>
+
 public class Player : MonoBehaviour
 {
     public int playerID = -1;
-    public float playerMoney = 0;
+    public double playerMoney = 0;
 
     //MovementState    
     public int steps = 0;
 
-    //QuestState
-    public bool pickUp = false;
-    public bool dropOff = false;
-    
-
-    //Quest Selector
-    public bool NoActiveQuest; // atur lagi
-    public Quest activeQuest;
-    public QuestSelector questSelector;
-
-    //special node mode
-    public bool specialNode = false;
-    public bool effectResolved = false;
+    public int carFuel;
 
     //playerEffectManager
     public PlayerEffectManager playerEffectManager;
 
     private void Update()
     {
-        ///DEBUGING ONLY
-        if(Input.GetKeyDown(KeyCode.Q))
-        {
-            if (activeQuest != null)
-                Debug.Log("ACTIVE QUEST (pickup " + activeQuest.pickupNode + " |des " + activeQuest.destinationNode + ")");
-            else Debug.Log(activeQuest + " activeQuest");
-        }
+        ///DEBUGING ONLY     
         if (Input.GetKeyDown(KeyCode.R))
         {
             Debug.Log("MONEY :" +playerMoney);
         }
     }
 
-    // Check Node Menunjukan Trigger pada Player
-    public void CheckQuestNode(Node currentNode)
+
+    public void AddMoney(double modifier)
     {
-
-        if (currentNode == activeQuest.pickupNode)
-        {
-            pickUp = true;
-            //trigger anim if avaialable
-        }
-
-        if (currentNode == activeQuest.destinationNode && pickUp)
-        {
-
-            dropOff = true;
-
-            playerMoney += activeQuest.reward;
-            activeQuest = null;// hanya null isi variable dari class (class != null / activeQuest != null )
-
-            NoActiveQuest = true; // mark klo ga ada quest
-
-            questSelector.OpenQuestSelector(playerID);
-            // triger anim if avaialble
-            
-        }
-
-        
+        playerMoney += modifier;
     }
-
-    public void CheckSpecialNode(Node currentNode)
-    {
-        if (currentNode.isSpecial())
-        {
-            specialNode = true;
-            Debug.Log("SPECIAL NODE");
-        }
-    }
-
-
-    public void SetQuest (Quest qt) // SET ACTIVE QUEST WAJIB PAKE INI
-    {
-        activeQuest = qt;
-        dropOff = false;
-        pickUp = false;
-        NoActiveQuest = false;
-    }
-
     
 }

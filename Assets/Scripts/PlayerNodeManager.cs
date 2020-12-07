@@ -26,7 +26,6 @@ public class PlayerNodeManager : MonoBehaviour
     {
         destinationNode = selectedNode;
         destinationTransform = destinationNode.GetTransform();
-        
     }
 
     public void GetNextDestination()

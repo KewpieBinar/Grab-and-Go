@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EffectC : BaseEffect
+public class EffectC 
 {
-    int _test = 123;
+    /*int _test = 123;
     public EffectC(int test)
     {
         _test = test;
@@ -13,5 +13,5 @@ public class EffectC : BaseEffect
     {
         Debug.Log("test class "+_test);
     }
-
+*/
 }

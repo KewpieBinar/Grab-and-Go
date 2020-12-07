@@ -4,65 +4,37 @@ using UnityEngine;
 
 public class EffectManager : MonoBehaviour
 {
-    public void ActivateEffect(Card card)
+    public void ActivateEffect(Player player, Card card)
     {
-        /*_baseEffect.ActivateEffect();
-        foreach (Transform t in transform)
+        if (card == null) return;
+        var effectTag = card.EffectTag;
+        
+        IEffect effect = null;
+
+        for (int i = 0; i < transform.childCount; i++)
         {
-            string effName = t.name;
-            if (effName == card._effectID)
+            Transform t = transform.GetChild(i);
+            string test = t.name;
+            bool isTrue = effectTag.Equals(test);
+
+            if (isTrue)
             {
-                IEffect effect = t.GetComponent<IEffect>();
-                effect.OnEffect(card);
+                effect = t.GetComponent<IEffect>();
+                break;
             }
-        }*/
+        }
+
+        if (effect == null) return;
+
+        effect.OnEffect(player, card);
     }
 
 }
 
-
-public class BaseEffect
-{
-    public virtual void ActivateEffect()
-    {
-
-    }
-}
 
 
 public interface IEffect
 {
-    void OnEffect(Player player);
+    void OnEffect(Player player , Card card);
 
 }
-
-/*public Player _player;
-   public int _effectID = 2;
-   public EffectC _effectC;
-   public BaseEffect _baseEffect;
-   private void Start()
-   {
-       _effectC = new EffectC(123);
-       _baseEffect = (BaseEffect)_effectC;
-       Card card = new Card(_player, _effectID.ToString(), true);
-       ActivateEffect(card);
-   }
-
-   public void ActivateEffect (Card card)
-   {
-       _baseEffect.ActivateEffect();
-       foreach(Transform t in transform)
-       {
-           string effName = t.name;
-           if(effName == card._effectID)
-           {
-               IEffect effect = t.GetComponent<IEffect>();
-               effect.OnEffect(card);
-           }
-       }
-   }
-
-   public void EmbededEffect()
-   {
-
-   }*/
