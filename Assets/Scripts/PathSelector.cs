@@ -26,19 +26,23 @@ public class PathSelector : MonoBehaviour
     {
         int nodeBranch = current.NodeActiveConnection();
 
-        if(nodeBranch == 2)
+        /*if(nodeBranch == 2)
         {
             var nextNode = AutoSelection(current, previous);
             return nextNode;
         }
 
-        if(nodeBranch > 2)
+        if(nodeBranch > 2 || nodeBranch == 1)
         {
             var nextNode = ManualSelection(current);
             return nextNode;
-        }
+        }*/
 
-        return null;
+
+        var nextNode = ManualSelection(current);
+        return nextNode;
+
+        //return null;
     }
 
     public Node AutoSelection(Node current , Node previous)

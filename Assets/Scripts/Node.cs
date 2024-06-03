@@ -6,19 +6,23 @@ using System;
 public class Node : MonoBehaviour
 {
     public int nodeID;
+    public string NodeName = "null";
 
     public Action<string> nodeTrigger;
 
     public NodeEffect nodeEffect;
+    public NodeChangeColor nodeColor;
     //connection
     public Node north;
     public Node south;
     public Node east;
     public Node west;
+    // kyknya in iyang beratin bikin garbage collection banyak
     private List<Node> connection => new List<Node>(4) { north, east, south, west };
 
     private void Awake()
     {
+        nodeColor = this.GetComponent<NodeChangeColor>();
         nodeEffect = gameObject.GetComponent<NodeEffect>();
     }
 
@@ -28,6 +32,7 @@ public class Node : MonoBehaviour
         {
             nodeTrigger(gameObject.name); // contoh implementasi
         }
+        
     }
 
     public void SetEffect()
@@ -42,13 +47,13 @@ public class Node : MonoBehaviour
         string tag = gameObject.tag;
 
         if (tag.Equals(spc)) return true;
-        return false;
+        else return false;
     }
 
-    public bool HasEffect()
+   /* public bool HasEffect()
     {
-        return nodeEffect.IsNull;
-    }
+        return nodeEffect.effectOnNode;
+    }*/
 
     public int NodeActiveConnection()
     {

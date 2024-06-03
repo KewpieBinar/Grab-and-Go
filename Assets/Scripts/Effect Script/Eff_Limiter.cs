@@ -6,7 +6,7 @@ public class Eff_Limiter : MonoBehaviour,IEffect
 {
     public void OnEffect(Player player, Card card)
     {
-        var limit = card.modifier;
+        var limit = card.Modifier;
 
         if (player.steps <= limit) return;
 

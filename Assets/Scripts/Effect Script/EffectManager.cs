@@ -4,6 +4,13 @@ using UnityEngine;
 
 public class EffectManager : MonoBehaviour
 {
+    public EffectPlacementManager effectPlacement;
+    public bool placeEffectOnNode = false;
+
+    private void Awake()
+    {
+        effectPlacement = this.GetComponent<EffectPlacementManager>();
+    }
     public void ActivateEffect(Player player, Card card)
     {
         if (card == null) return;
@@ -27,6 +34,11 @@ public class EffectManager : MonoBehaviour
         if (effect == null) return;
 
         effect.OnEffect(player, card);
+    }
+
+    public void PlaceEffectOnNode(Player player, Card card)
+    {
+        placeEffectOnNode = true;
     }
 
 }

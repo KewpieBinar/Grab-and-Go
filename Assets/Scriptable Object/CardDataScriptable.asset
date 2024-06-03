@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32c79bac90f2fd54a9a569b6c550c4e2, type: 3}
+  m_Name: CardDataScriptable
+  m_EditorClassIdentifier: 
+  CardDataSize: 4
+  _effectName:
+  - Stop Sign
+  - Limit Speed 4
+  - Stop Sign Trap
+  - Limit Speed 3 Trap
+  - Limit Speed 3 Trap
+  - Limit Speed 3 Trap
+  _effectTag:
+  - STOP
+  - LIMIT
+  - STOP
+  - LIMIT
+  - POLICE
+  - POLICE
+  _effectOnPlayer: 010100000100
+  _effectDuration: 000000000000000000000000000000000000000000000000
+  _effectModifier: 000000000400000000000000030000003200000032000000
+  _effectSprite:
+  - {fileID: 21300000, guid: d87e1850bd59f4849928ba760ce6e1e8, type: 3}
+  - {fileID: 21300000, guid: 1d8a6d14922c94e448ddbca0bc86cd40, type: 3}
+  - {fileID: 21300000, guid: 8e69b94cd12afd74c8100177603e8478, type: 3}
+  - {fileID: 21300000, guid: e3164864fe1e3bb48b2ef05ae90e0c0f, type: 3}
+  - {fileID: 21300000, guid: a0e54f9be1a5a0c4eb66c188e1498ed7, type: 3}
+  - {fileID: 21300000, guid: fc3ba4fa54a094547aef0c6048b8c068, type: 3}

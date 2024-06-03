@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿
 using UnityEngine;
 using System;
 
@@ -7,10 +6,28 @@ public class NodeEffect : MonoBehaviour
 {
     public EffectManager effectManager;
     public Card cardOnNode;
-    public bool IsNull => (cardOnNode == null);
+    //public bool IsNull => (cardOnNode == null);
+    public bool effectOnNode = false;
 
-    public void OnSelect(Player player)
+    private void Awake()
     {
-        effectManager.ActivateEffect(player,cardOnNode);
+
+        if (effectManager == null)
+            effectManager = GameMechanicReference.Instance.GetEffectManager;
     }
+
+
+    public void SetCardOnNode(Card card)
+    {
+        cardOnNode = card;
+        effectOnNode = true;
+
+        //change color ok
+    }
+
+    /*private void OnMouseDown()
+    {
+        if (!effectManager.placeEffectOnNode) return;
+        Debug.Log(this.gameObject.name);
+    }*/
 }

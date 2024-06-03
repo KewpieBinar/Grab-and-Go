@@ -1,34 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 
-// it fuking works
+// amggap scene loader
 public class TestScript : MonoBehaviour
 {
-    /*private void Start()
-    {
-        TestableClass tClass = new TestableClass(2);
-        ITestable iTest = tClass;
-        iTest.Test(20);
-    }*/
-}
+    [SerializeField]
+    private List<string> _sceneToLoad;
 
-public interface ITestable
-{
-    void Test(int a);
-}
-
-public class TestableClass : MonoBehaviour, ITestable
-{
-    int num;
-    public TestableClass (int isi)
+    public void LoadScene(int sceneIndex)
     {
-        num = isi;
-    }
-
-    public void Test(int isi)
-    {
-        Debug.Log(" bruh isi "+isi);
+        SceneManager.LoadScene(_sceneToLoad[sceneIndex]);
     }
 }
+

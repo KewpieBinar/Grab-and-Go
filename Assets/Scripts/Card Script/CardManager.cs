@@ -12,10 +12,11 @@ public class CardManager : MonoBehaviour
 
     public Card GetNewRandomCard()
     {
-        var random = UnityEngine.Random.Range(0, _poolLength);
+        /*var random = UnityEngine.Random.Range(0, _poolLength);
         var selectedScriptable = scriptablePool[random];
 
-        return new Card(selectedScriptable);
+        return new Card(selectedScriptable);*/
+        return null;
     }
 
 }

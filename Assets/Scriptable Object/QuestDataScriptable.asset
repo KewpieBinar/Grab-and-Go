@@ -1,0 +1,75 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d2df49b142193749817d0d0b2782f7f, type: 3}
+  m_Name: QuestDataScriptable
+  m_EditorClassIdentifier: 
+  locationSize: 19
+  locationSprite:
+  - {fileID: 21300000, guid: 4810adb5556d4264a9cbfa4aa5f47c82, type: 3}
+  - {fileID: 21300000, guid: fa5defa14b438964c891ad0c83e9f1b1, type: 3}
+  - {fileID: 21300000, guid: c755974dad90c7f4bab10cb65a000776, type: 3}
+  - {fileID: 21300000, guid: 95ee3f0f44070ad4d8c13beec2a16b28, type: 3}
+  - {fileID: 21300000, guid: d59ba313d23cd5248a7630a352a6cddf, type: 3}
+  - {fileID: 21300000, guid: df39c5162960a124298129b593b1c2a5, type: 3}
+  - {fileID: 21300000, guid: b236951ed23194549878cb6bffa90f54, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 21300000, guid: 4bd91fb90247f7748be5077341fd59b2, type: 3}
+  - {fileID: 21300000, guid: feea17f0fdfa9604284ee59964aeaba8, type: 3}
+  - {fileID: 21300000, guid: 1854dd33353040d478d1b0bda3a8fe13, type: 3}
+  - {fileID: 21300000, guid: 0cb8fcfc057c1f3428f20ce95017e312, type: 3}
+  - {fileID: 21300000, guid: 2e0f2caf17b999f49b83c4f0e8f4fc78, type: 3}
+  - {fileID: 21300000, guid: 8b9250e217a158b4fbe9b8410ad3f0e2, type: 3}
+  - {fileID: 21300000, guid: 6d4326321f3afab4fac87d42ffa3260a, type: 3}
+  - {fileID: 21300000, guid: b0125cdb436e3c4479bad426cc6155b6, type: 3}
+  - {fileID: 21300000, guid: 5da0c590ba04d404dad16431dc15b5fc, type: 3}
+  - {fileID: 21300000, guid: 557f8c8c6f229604eabcdec5f51a4a93, type: 3}
+  locationNameSprite:
+  - {fileID: 21300000, guid: 28d3345e19cdfbf4a898ad56dc82f9b0, type: 3}
+  - {fileID: 21300000, guid: 8e95dde58f4a2894b88408b8c9ea186e, type: 3}
+  - {fileID: 21300000, guid: 56b8789d78bf8c9428e13040b4470491, type: 3}
+  - {fileID: 21300000, guid: 40b6d346977f13843b6cb0e2457cb7a7, type: 3}
+  - {fileID: 21300000, guid: 81dcfcd4e00378d4d9171217126ce72c, type: 3}
+  - {fileID: 21300000, guid: 74ddd38edc17d2840b3489ca28016ba8, type: 3}
+  - {fileID: 21300000, guid: ad873aa967a52914d98eec75a4a42a4b, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 21300000, guid: f8f99bd3ed4e84143920ac8cac2fd7cf, type: 3}
+  - {fileID: 21300000, guid: 9b9719248f8774a469a5552a220b1628, type: 3}
+  - {fileID: 21300000, guid: 8e1b6bc14ac20b34baf5b1b3eddfb2fe, type: 3}
+  - {fileID: 21300000, guid: 18a94a5699d2226469f392ed351f153c, type: 3}
+  - {fileID: 21300000, guid: c20ed706b20ddd94b991e3ca9f61c5c0, type: 3}
+  - {fileID: 21300000, guid: bb0ce3c1d513ecc4dba9d039766f5479, type: 3}
+  - {fileID: 21300000, guid: 4508441e789e2014fae6735babdbf530, type: 3}
+  - {fileID: 21300000, guid: 13b648033b9ad094c80479d4f28eb633, type: 3}
+  - {fileID: 21300000, guid: 34ebc7a6502d7cc4ba40f1a3dd2daf0e, type: 3}
+  - {fileID: 21300000, guid: d31410c7c7f44314381c0230bef869f7, type: 3}
+  locationName:
+  - Noded Alfamart Blue
+  - Node Mall Blue
+  - Node Cafe Brown
+  - Node Pizza Red
+  - Node Cafe Gray
+  - Node Campus Red
+  - Node Campus Yellow
+  - Node Hospital
+  - Node Police Blue
+  - Node Library
+  - Node Pizza Blue
+  - Node Cafe Turqoise
+  - Node Alfamart Green
+  - Node Park
+  - Node Mall Yellow
+  - Node Museum
+  - Node Cafe Purple
+  - Node Alfamart Red
+  - Node Campus Blue

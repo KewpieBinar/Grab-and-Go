@@ -5,40 +5,34 @@ using UnityEngine;
 [System.Serializable]
 public class Card
 {
-    public string EffectName;
+    [SerializeField]
+    private string _effectName;
+    public string EffectName => _effectName;
+    [SerializeField]
+    private string _effectTag ;
+    public string EffectTag => _effectTag;
+    [SerializeField]
+    public bool EffectOnPlayer;
+    [SerializeField]
+    private int _effectDuration;
+    public int EffectDuration => _effectDuration;
+    [SerializeField]
+    private int _modifier;
+    public int Modifier => _modifier;
 
-    public string EffectTag;
-    
-    public bool effectOnPlayer;
-
-    public int effectDuration;
-
-    public int modifier;
+    private Sprite _effectSprite;
+    public Sprite EffectSprite => _effectSprite;
 
     public ScriptableCard CardData;
 
-    public Card(ScriptableCard cardData)
+    public Card(string effectName, string effectTag, Sprite effectSprite,bool effectOnPlayer,int effectDuration, int modifier)
     {
-        CardData = cardData;
-        if (cardData == null) return;
-
-        effectDuration = cardData.effectDuration;
-        EffectTag = cardData.EffectTag;
-        EffectName = cardData.EffectName;
-        modifier = cardData.modifier;
-        effectOnPlayer = cardData.effectOnPlayer;
-
+        _effectName = effectName;
+        _effectTag = effectTag;
+        _effectSprite = effectSprite;
+        EffectOnPlayer = effectOnPlayer;
+        _effectDuration = effectDuration;
+        _modifier = modifier;
+        
     }
-
-/*    public Card( effectName)
-    {
-
-
-        this.effectDuration = effectDuration;
-        this.EffectTag = EffectTag;
-        this.EffectName = EffectName;
-        this.modifier = modifier;
-        this.effectOnPlayer = effectOnPlayer;
-
-    }*/
 }
